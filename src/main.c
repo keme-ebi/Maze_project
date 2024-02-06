@@ -2,7 +2,16 @@
 
 int main(int argc, char *argv[])
 {
-    printf("Hello");
+    game_is_running = initialize_window();
+
+    setup();
+    while (game_is_running)
+    {
+        process_input();
+        render();
+    }
+
+    destroy_window();
 
     return (0);
 }
