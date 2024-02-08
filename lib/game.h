@@ -50,5 +50,9 @@ void render(void);
 void update(void);
 void destroy_window(void);
 void ray(void);
+void calc_steps(float rayDirX, float rayDirY, int *stepX, int *stepY, float *sideDistX, float *sideDistY, float posX, float posY, int mapX, int mapY, float deltaDistX, float deltaDistY);
+void performDDA(int *mapX, int *mapY, float *sideDistX, float *sideDistY, float *deltaDistX, float *deltaDistY, float *rayDirX, float *rayDirY, int *stepX, int *stepY, int *hit, int *side);
+void drawLine(int x, int startY, int endY, int r, int g, int b);
+void color(int mapX, int mapY, int *r, int *g, int *b);
 
 #endif /* GAME_H */

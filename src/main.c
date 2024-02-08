@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
     while (game_is_running)
     {
         process_input();
-        render();
+        ray();
+        // render();
     }
 
     destroy_window();
