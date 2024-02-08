@@ -34,6 +34,7 @@ typedef struct Player
     float planeY;
 } Player;
 
+extern Player player;
 extern float time;
 extern float oldTime;
 extern int map[mapWidth][mapHeight];
@@ -43,10 +44,11 @@ extern SDL_Renderer *renderer;
 extern SDL_Event event;
 
 int initialize_window(void);
-void setup();
+void setup(void);
 void process_input(void);
 void render(void);
 void update(void);
 void destroy_window(void);
+void ray(void);
 
 #endif /* GAME_H */

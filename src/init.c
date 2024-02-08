@@ -43,14 +43,16 @@ int initialize_window(void)
 }
 
 /**
- * setup - sets the player positions and everything up
+ * setup - sets up the player's position, direction, plane and time
  *
+ * Return: void
  */
 void setup(void)
 {
     player.posX = 22;
     player.posY = 12;
     player.dirX = -1;
+    player.dirY = 0;
     player.planeX = 0;
     player.planeY = 0.66;
     time = 0;
@@ -60,6 +62,7 @@ void setup(void)
 /**
  * process_input - checks if the exit button has been clicked
  *
+ * Return: void
  */
 void process_input(void)
 {
@@ -78,6 +81,7 @@ void process_input(void)
 /**
  * render - draws objects and colors to the window
  *
+ * Return: void
  */
 void render(void)
 {
@@ -90,6 +94,7 @@ void render(void)
 /**
  * destroy_window - destroys the window once game_is_running becomes false
  *
+ * Return: void
  */
 void destroy_window(void)
 {
